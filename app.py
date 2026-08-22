@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-# Temporary in-memory storage (we can add a database later)
+
 equipments = ["Conveyor Belt A", "CNC Machine 1"]
 downtime_logs = []
 
