@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipment Downtime Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; }
+        nav { background: #333; padding: 10px; margin-bottom: 20px; border-radius: 4px; }
+        nav a { color: white; margin-right: 15px; text-decoration: none; font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        form { background: #f9f9f9; padding: 20px; border-radius: 4px; width: 300px; }
+        input, select, button { width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; }
+        button { background: #28a745; color: white; border: none; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('log_downtime') }}">Log Downtime</a>
+        <a href="{{ url_for('log_equipment') }}">Log Equipment</a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>

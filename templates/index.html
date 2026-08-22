@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+
+<h3>Registered Equipment</h3>
+<ul>
+    {% for eq in equipments %}
+    <li>{{ eq }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Downtime History</h3>
+<table>
+    <tr>
+        <th>Equipment</th>
+        <th>Reason</th>
+        <th>Duration (mins)</th>
+    </tr>
+    {% for log in logs %}
+    <tr>
+        <td>{{ log.equipment }}</td>
+        <td>{{ log.reason }}</td>
+        <td>{{ log.duration }}</td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="3">No downtime recorded yet.</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

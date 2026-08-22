@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Log Downtime Event</h2>
+<form method="POST">
+    <label>Select Equipment:</label>
+    <select name="equipment" required>
+        {% for eq in equipments %}
+        <option value="{{ eq }}">{{ eq }}</option>
+        {% endfor %}
+    </select>
+    
+    <label>Reason for Downtime:</label>
+    <input type="text" name="reason" placeholder="e.g., Jammed feeder" required>
+    
+    <label>Duration (minutes):</label>
+    <input type="number" name="duration" placeholder="e.g., 45" required>
+    
+    <button type="submit">Submit Log</button>
+</form>
+{% endblock %}

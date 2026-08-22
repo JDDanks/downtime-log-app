@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Register New Equipment</h2>
+<form method="POST">
+    <label>Equipment Name / ID:</label>
+    <input type="text" name="equipment_name" placeholder="e.g., Packaging Line 2" required>
+    <button type="submit">Add Equipment</button>
+</form>
+{% endblock %}
